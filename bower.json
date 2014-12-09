@@ -1,6 +1,8 @@
 {
   "name": "xstyle-todo",
   "dependencies": {
+    "dojo": "~1.9",
+    "dstore": "~1.0",
     "todomvc-common": "~0.3"
   }
 }
