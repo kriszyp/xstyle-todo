@@ -1,0 +1,6 @@
+{
+  "name": "xstyle-todo",
+  "dependencies": {
+    "todomvc-common": "~0.3"
+  }
+}
