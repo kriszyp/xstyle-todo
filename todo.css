@@ -28,7 +28,7 @@ get: controller; /* force it to load now*/
 						input.toggle[type=checkbox] (item/completed) {
 							on-change: tasks/put(item);
 						},
-						label.view[title=(item/title)] (item/title) {
+						label.view (item/title) {
 							text-decoration: get(item/completed ? 'line-through' : 'none');
 							on-dblclick: set(editing, true);
 							on-dblclick: controller/focus-input(task-element);
