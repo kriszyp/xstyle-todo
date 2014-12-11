@@ -1,5 +1,5 @@
 define(['dstore/Memory', 'dstore/Trackable'], function(Memory, Trackable){
-	tasks = new (Memory.createSubclass(Trackable))({data:[
+	var tasks = new (Memory.createSubclass(Trackable))({data:[
 		{id:'one', title:'One', completed: false},
 		{id:'two', title:'Two', completed: false},
 		{id:'three', title:'Three', completed: false}
@@ -36,7 +36,7 @@ define(['dstore/Memory', 'dstore/Trackable'], function(Memory, Trackable){
 		todoCount: 3,
 		completedCount: 0
 	};
-	tasks.on('add,update,delete', function(event){
+	tasks.on('add,update,delete', function(){
 		activeTasks.fetch().totalLength.then(function(totalLength){
 			model.todoCount = totalLength;	
 		});
