@@ -1,4 +1,6 @@
-@import 'bower_components/todomvc-common/base.css';
+@import 'bower_components/todomvc-common/base.css'; /* the todomvc styling stylesheet */
+
+/* load the model and controller modules */
 model = module(xstyle-todo/todo-model);
 controller = module(xstyle-todo/todo-controller);
 tasks = model/tasks;
