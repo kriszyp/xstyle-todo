@@ -3,7 +3,6 @@ model = module(xstyle-todo/todo-model);
 controller = module(xstyle-todo/todo-controller);
 tasks = model/tasks;
 tasks-view = model/tasks-view;
-get: controller; /* force it to load now*/
 
 #header {
 	=>
@@ -60,3 +59,5 @@ get: controller; /* force it to load now*/
 		visibility: get(model/todo-count > 0 ? 'visible' : 'hidden');
 	}
 }
+
+get: controller; /* force it to load now, so that URL hash navigation immediately works*/
