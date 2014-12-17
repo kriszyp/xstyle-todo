@@ -21,6 +21,7 @@ define(['dstore/Memory', 'dstore/Trackable'], function(Memory, Trackable){
 		addItem: function(event){
 			event.preventDefault(); // don't submit the form
 			tasks.add({title: model.newItem, completed: false});
+			// reset the new item textbox
 			model.newItem = '';
 		},
 		clearCompleted: function(){
@@ -45,10 +46,10 @@ define(['dstore/Memory', 'dstore/Trackable'], function(Memory, Trackable){
 	// listen for any changes to the data and update the data totals
 	tasks.on('add,update,delete', function(){
 		activeTasks.fetch().totalLength.then(function(totalLength){
-			model.todoCount = totalLength;	
+			model.todoCount = totalLength;
 		});
 		completedTasks.fetch().totalLength.then(function(totalLength){
-			model.completedCount = totalLength;	
+			model.completedCount = totalLength;
 		});
 	});
 
